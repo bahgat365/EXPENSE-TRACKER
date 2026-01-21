@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  list-style: none;
+    
+}
+:root{
+    --shadow_box:0 1px 3px rgba(0, 0, 0, 0.12), 
+            0 1px 2px rgba(0, 0, 0, 0.24); 
+    
+}
+body{
+    height: 100vh;
+    background: linear-gradient(45deg, #dece85 0%, #bfaa6b 99%, #726c48 100%);
+}
+h1{
+    background:rgb(78, 18, 183);
+    color:white ;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    height: 70px;
+    
+}
+.contaner{
+width: 350px;
+margin: 30px auto;
+background: linear-gradient(to bottom,rgba(255, 255, 255, 0.515) 0%,rgba(255, 255, 255, 0.301) 100%);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+border-radius:15px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+padding: 15px;
+}
+.contaner .balance{
+    margin-bottom: 10px;
+    text-align: center;
+    h4{
+    font-size: smaller;    
+}
+.balance_num{
+font-size: 25px;
+font-weight:600;
+}
+}
+
+ .contaner .show_result{
+    width: 250px;
+    margin:20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: var(--shadow_box);
+    
+    h4{
+        font-size: small;
+        font-weight: bold;
+    }
+    .income{
+        padding-right: 30px;
+        border-right: solid 1px rgba(0, 0, 0, 0.284);
+    }
+    .income_num{
+    color: rgba(20, 194, 93, 0.641);
+    text-align: center;
+    margin-top: 6px;
+}
+.expense_num{
+    color: rgba(255, 0, 0, 0.59);
+    text-align: center;
+    margin-top: 6px;
+}
+
+}
+.title{
+text-transform: capitalize;
+font-weight: bold;
+border-bottom: rgba(0, 0, 0, 0.197) solid 1px;
+padding-bottom: 5px;
+margin-bottom: 20px;
+user-select: none;
+}
+.history .list{
+max-height: 150px;
+overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.707); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6211ec, #4facfe); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6211ec; 
+}
+.history .list .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    margin: 7px; 
+    box-shadow: var(--shadow_box);
+    position: relative;
+    margin-left: 20px;
+}
+.history .list .item.plus{
+    border-right: rgba(20, 194, 93, 0.727)  solid 5px;
+}
+.history .list .item.minus{
+    border-right: rgba(255, 0, 0, 0.623)  solid 5px;
+}
+.history .list .item_name{
+    user-select: none;
+   display: flex;
+justify-content: center;
+align-items: center;
+}
+/* .history .list .item_name::before{
+    content: '\e872';
+    font-family:'Material Symbols Outlined';
+    position: absolute;
+    left: -22px;
+    color:red;
+    cursor: pointer;
+    font-size: 20px;
+opacity: 0; 
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+     padding-right: 15px;
+}
+.history .list .item:hover .item_name::before
+{
+  opacity: 1;
+    visibility: visible;
+} */
+ .history .list .item_name span{
+position: absolute;
+left: -27px;
+font-size: 20px;
+padding: 10px 5px;
+color: red;
+opacity: 0; 
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+ }
+ .history .list .item:hover span
+{
+  opacity: 1;
+    visibility: visible;
+}
+.title.Transaction{
+    margin-top: 25px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    input:not(button){
+        margin: 10px 0;
+        padding: 8px;
+        border-radius: 5px;
+        outline: none;
+        border: #bfaa6b solid 1px;
+    }
+    input:not(button):focus{
+        border:none;
+    }
+     input:not(button):focus::placeholder{
+        opacity: 0;
+    }
+   button[type="submit"] {
+    margin-top: 20px;
+    width: 100%; 
+    cursor: pointer;
+    padding: 10px;
+    background-color:rgb(78, 18, 183);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+ button[type="submit"]:hover{
+    background-color: rgb(97, 36, 203);
+ }
+}
